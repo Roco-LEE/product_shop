@@ -17,6 +17,12 @@ const ProductList = () => {
                         <p>설명: {product.description}</p>
                     </div>
                 ))}
+                <hr />
+                <div>
+                    <Link to="/add-product">
+                        <button>상품 등록하기</button>
+                    </Link>
+                </div>
             </section>
         </div>
     )
