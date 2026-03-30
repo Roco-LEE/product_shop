@@ -12,4 +12,12 @@
 
 .main{
   padding: 20px;
+  text-align: center;
+}
+
+.product-list,
+.add-product,
+.sign-in{
+  padding: 20px;
+  text-align: center;
 }
