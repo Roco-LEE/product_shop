@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <div>
-        <BrowserRouter>
+        <BrowserRouter basename="/product_shop">
           <Header></Header>
           {/* <Main></Main> */}
           <Routes>
