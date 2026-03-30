@@ -2,7 +2,7 @@ import { useState } from "react";
 import { users } from "../data/users";
 import { useNavigate } from "react-router-dom";
 
-const SignIn = () => {
+const SignIn = ({onLogin, onLogout}) => {
     //입력 데이터를 객체로 통합
     const [loginData, setLoginData] = useState({
         userId: '',
@@ -36,6 +36,7 @@ const SignIn = () => {
 
         if(matched) {
             setResult('success');
+            onLogin(userId); //App에 로그인 정보 전달
             console.log('1');
 
             navigate('/');
