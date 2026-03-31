@@ -41,10 +41,16 @@ const AddProduct = () => {
         navigate('/products');
     }
 
+    const handleCancel = (e) => {
+        e.preventDefault(); // 폼 제출 방지
+        const initialFormState = { name: "", price: "", description: "" };
+        setFormData(initialFormState); // 상태를 초기값으로 업데이트
+    }
+
     return (
         <section className="add-product">
             <h2>상품 등록</h2>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="add-form">
                 <div>
                     <label htmlFor="name">상품명:</label>
                     <input 
@@ -79,6 +85,7 @@ const AddProduct = () => {
                 </div>
                 <div>
                     <button type="submit">등록</button>
+                    <button type="reset" onClick={handleCancel}>취소</button>
                 </div>
             </form>
         </section>
